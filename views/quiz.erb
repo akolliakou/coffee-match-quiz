@@ -1,13 +1,10 @@
 <div class="intro">
-  <h2>First things first! How do you take your coffee?</h2>
+  <h2><%= @question %></h2>
     <div class="btn-container">
-      <a class="quiz-button" href="">Classic Black</a>
-      <a class="quiz-button" href="">Maybe a splash of milk but not too much</a>
-      <a class="quiz-button" href="">Lots of sugar and/or cream</a>
-      <a class="quiz-button" href="">Flavoured creamer or syrup - I like it sweet</a>
-      <a class="quiz-button" href="">A shot of whiskey, thanks!</a>
-      <a class="quiz-button" href="">As an espresso</a>
+      <% @choices.each do |choice| %>
+        <form action="<%= @current_path %>/<%= choice.downcase %>" method="post">
+          <button class="quiz-button" name="choice"><%= choice %></button>
+        </form>
+      <% end %>
     </div>
 </div>
-
-<div class="page-number">1 / 7</div>

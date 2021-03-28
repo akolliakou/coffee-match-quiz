@@ -13,7 +13,14 @@ get "/" do
 end
 
 # First quiz page
-get "/quiz" do
+get "/weather" do
+  @current_path = request.path
+  @question = "First things, first! Is it warm or cold outside?"
+  @choices = ["Warm", "Cold"]
   erb :quiz
+end
+
+post "/weather/warm" do
+  
 end
 

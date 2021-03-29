@@ -1,10 +1,21 @@
 <div class="intro">
-  <h2><%= @question %></h2>
-    <div class="btn-container">
-      <% @choices.each do |choice| %>
-        <form action="<%= @current_path %>/<%= choice.downcase %>" method="post">
-          <button class="quiz-button" name="choice"><%= choice %></button>
-        </form>
-      <% end %>
+  <% if @completed != true %>
+    <h2><%= @question %></h2>
+      <div class="btn-container">
+        <% @choices.each do |choice| %>
+          <% url_choice = choice.delete(" ") %>
+          <form action="<%= @current_path %>/<%= url_choice.downcase %>" method="post">
+            <button class="quiz-button" name="choice"><%= choice %></button>
+          </form>
+        <% end %>
+      </div>
+  <%else %>
+    <div>
+      <h1 class="complete-h1"><%= @coffee_match %></h1>
     </div>
+  <% end %>
 </div>
+
+<% if @image %>
+  <img class="img-complete" src="<%= @image %>" class="center"/>
+<% end %>

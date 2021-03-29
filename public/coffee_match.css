@@ -24,16 +24,8 @@ html, body {
 
 h1 {
   color: #266150;
-/*  text-transform: uppercase;*/
   font-size: 3.5rem;
   margin: 0;
-}
-
-h2 {
-  color: #4F4846;
-/*  text-transform: uppercase;*/
-  font-size: 2.5rem;
-  margin-top: 4rem;
 }
 
 .intro-h1 {
@@ -42,6 +34,18 @@ h2 {
   font-size: 1rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
+}
+
+.complete-h1 {
+  color: #266150;
+  font-size: 3.5rem;
+  margin-top: 4rem;
+}
+
+h2 {
+  color: #4F4846;
+  font-size: 2.5rem;
+  margin-top: 4rem;
 }
 
 .button {
@@ -58,41 +62,44 @@ h2 {
 }
 
 .button:hover {
-  border-color: black;
-}
-
-.button:active {
-  color: darkred;
-  font-weight: bold;
+  color: darkred
 }
 
 .quiz-button {
+  width:250px;
+  height:75px;
   font-size: 1.25rem;
   text-decoration: none;
   text-transform: uppercase;
+  text-align: center;
   color: #266150;
-  border: 1px solid oldlace;
-  padding: 0.25rem 0.5rem;
+  outline: none;
+  border: 2px solid oldlace;
   background-color: #DDAF94;
-  border-radius: 5px;
   opacity: 0.85;
   display: inline;
-  width:120px;
-  height:50px;
-  text-align:center;
-/*  line-height:1.1em;*/
 }
 
 .quiz-button:hover {
-  border-color: black;
+  font-weight: bold;
 }
 
 .quiz-button:active {
-  font-weight: bold;
+  border-color: #4F4846;
 }
 
 .btn-container {
   width: 300px;
   margin: auto;
   margin-top: 8rem;
+}
+
+.img-complete {
+  width: 800px;
+  height: 600px;
+  object-fit: cover;
+  margin-top: 5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

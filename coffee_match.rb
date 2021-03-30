@@ -1,7 +1,6 @@
 require "sinatra"
-require "sinatra/reloader"
+require "sinatra/reloader" if development?
 require "tilt/erubis"
-require "bcrypt"
 
 configure do 
   enable :sessions
@@ -236,6 +235,7 @@ end
 
 post "/weather/cold/yes/dayoff/no" do
   @completed = true
+  @image = "/hazelnut_coffee.jpeg"
 
   @current_path = request.path
 
@@ -255,6 +255,7 @@ end
 
 post "/weather/cold/yes/work/yes" do
   @completed = true
+  @image = "/cortado.jpg"
 
   @current_path = request.path
 
@@ -265,6 +266,7 @@ end
 
 post "/weather/cold/yes/work/no" do
   @completed = true
+  @image = "/americano_black.jpeg"
 
   @current_path = request.path
 

@@ -40,6 +40,7 @@ h1 {
   color: #266150;
   font-size: 3.5rem;
   margin-top: 4rem;
+  margin-bottom: 2rem;
 }
 
 h2 {
@@ -88,6 +89,20 @@ h2 {
   border-color: #4F4846;
 }
 
+/*.restart-button {
+  width:250px;
+  height:75px;
+  font-size: 1.25rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: #266150;
+  outline: none;
+  border: 2px solid oldlace;
+  background-color: #DDAF94;
+  opacity: 0.85;
+}*/
+
 .btn-container {
   width: 300px;
   margin: auto;
@@ -98,7 +113,7 @@ h2 {
   width: 800px;
   height: 600px;
   object-fit: cover;
-  margin-top: 5rem;
+  margin-top: 2rem;
   display: block;
   margin-left: auto;
   margin-right: auto;
